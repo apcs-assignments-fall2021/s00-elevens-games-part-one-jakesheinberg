@@ -31,8 +31,11 @@ public class Deck {
 	// Recall that the cards are dealt from top (highest-index) down
 	// Updates the size as well
 	public Card deal() {
+		if (size>0){
+		int temp=size;
 		size-=1;
-        return cardsList.get(size);
+        return cardsList.get(temp-1);}
+		return null;
 	}
 
 	// Determines if this deck is empty (there are no undealt cards).
